@@ -60,6 +60,8 @@ fail_if_error $?
 
 cat $CERTDIR/$CERTPREFIX.key $CERTDIR/$CERTPREFIX.crt > $CERTDIR/$CERTPREFIX.pem
 
+cp  $CERTDIR/$CERTPREFIX.pem /etc/openssl/certs
+
 chgrp -R $GROUP $CERTDIR
 
 unset PASSPHRASE
